@@ -7,43 +7,46 @@
   <meta name="description" content="Common patterns by body system and what they may be communicating. Free one-page reference guide from Get R.E.A.L. Integrative Health." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@400;500;600&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --teal:       #225777;
-      --dark-teal:  #12374E;
-      --light-teal: #D5E8F0;
-      --cream:      #DCE8F5;
-      --stone:      #7A7670;
-      --black:      #1A1A1A;
-      --white:      #ffffff;
+      --gold:       #BFA054;
+      --gold-light: #d4b96a;
+      --charcoal:   #181818;
+      --white:      #F8F6F2;
+      --text-sec:   #555;
+      --text-muted: #888;
     }
     body {
-      font-family: 'DM Sans', sans-serif;
+      font-family: 'Barlow', sans-serif;
       background: var(--white);
-      color: var(--black);
+      color: var(--charcoal);
       min-height: 100vh;
       display: flex;
       flex-direction: column;
+      -webkit-font-smoothing: antialiased;
     }
-    /* Header */
+
+    /* ─── HEADER ─── */
     header {
-      background: var(--teal);
-      padding: 16px 24px;
+      padding: 1.25rem 1.5rem;
       text-align: center;
+      border-bottom: 1px solid rgba(191,160,84,0.15);
     }
     header .brand {
-      font-size: 12px;
+      font-family: 'Cormorant Garamond', serif;
       font-weight: 500;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--cream);
+      font-size: 1.35rem;
+      color: var(--charcoal);
+      letter-spacing: 0.02em;
     }
-    /* Hero */
+    header .brand span { color: var(--gold); }
+
+    /* ─── HERO ─── */
     .hero {
-      background: var(--dark-teal);
-      padding: 68px 24px 60px;
+      background: var(--charcoal);
+      padding: 4.5rem 1.5rem 4rem;
       text-align: center;
       position: relative;
       overflow: hidden;
@@ -52,7 +55,7 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: radial-gradient(ellipse at 65% 0%, rgba(34,87,119,0.55) 0%, transparent 65%);
+      background: radial-gradient(ellipse at 65% 0%, rgba(191,160,84,0.08) 0%, transparent 65%);
       pointer-events: none;
     }
     .hero-inner {
@@ -62,188 +65,195 @@
     }
     .hero-eyebrow {
       display: inline-block;
-      font-size: 11px;
+      font-family: 'Barlow Condensed', sans-serif;
       font-weight: 500;
-      letter-spacing: 0.18em;
+      font-size: 0.75rem;
+      letter-spacing: 3px;
       text-transform: uppercase;
-      color: var(--light-teal);
-      margin-bottom: 18px;
+      color: var(--gold);
+      margin-bottom: 1.25rem;
     }
     .hero h1 {
-      font-family: 'DM Serif Display', serif;
-      font-size: clamp(30px, 5vw, 50px);
-      font-weight: 400;
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 500;
+      font-size: clamp(1.9rem, 5vw, 3rem);
       line-height: 1.18;
       color: var(--white);
-      margin-bottom: 20px;
+      margin-bottom: 1.25rem;
     }
-    .hero h1 em { font-style: italic; color: var(--light-teal); }
+    .hero h1 em {
+      font-style: italic;
+      color: var(--gold-light);
+    }
     .hero-sub {
-      font-size: 16px;
+      font-family: 'Barlow', sans-serif;
       font-weight: 300;
+      font-size: 1rem;
       line-height: 1.7;
-      color: var(--cream);
+      color: rgba(248,246,242,0.7);
       max-width: 500px;
       margin: 0 auto;
     }
-    /* Form section */
+
+    /* ─── FORM SECTION ─── */
     .form-section {
       background: var(--white);
-      padding: 52px 24px 44px;
+      padding: 3.25rem 1.5rem 2.75rem;
       text-align: center;
     }
     .form-wrap { max-width: 460px; margin: 0 auto; }
     .form-section h2 {
-      font-family: 'DM Serif Display', serif;
-      font-size: 21px;
-      font-weight: 400;
-      color: var(--dark-teal);
-      margin-bottom: 6px;
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 500;
+      font-size: 1.35rem;
+      color: var(--charcoal);
+      margin-bottom: 0.4rem;
     }
     .form-note {
-      font-size: 14px;
-      color: var(--stone);
-      margin-bottom: 26px;
+      font-family: 'Barlow', sans-serif;
+      font-weight: 400;
+      font-size: 0.9rem;
+      color: var(--text-sec);
+      margin-bottom: 1.5rem;
       line-height: 1.6;
     }
-    /* MailerLite overrides */
-    #mlb2-form, .ml-form-embedWrapper, .ml-form-embedBody {
-      background: transparent !important;
-      padding: 0 !important;
-      border: none !important;
-      box-shadow: none !important;
-      width: 100% !important;
+    .privacy-note {
+      font-family: 'Barlow', sans-serif;
+      font-weight: 300;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: 0.9rem;
+      line-height: 1.55;
     }
-    .ml-form-embedBody .ml-form-embedContent { display: none !important; }
-    .ml-form-fieldRow input[type="email"],
-    .ml-form-fieldRow input[type="text"] {
-      width: 100% !important;
-      padding: 13px 16px !important;
-      border: 1.5px solid var(--light-teal) !important;
-      border-radius: 3px !important;
-      font-family: 'DM Sans', sans-serif !important;
-      font-size: 15px !important;
-      color: var(--black) !important;
-      background: var(--white) !important;
-      outline: none !important;
-      transition: border-color 0.2s !important;
-      margin-bottom: 10px !important;
+
+    /* ─── CONTEXT SECTION ─── */
+    .context-section {
+      background: var(--charcoal);
+      padding: 3.25rem 1.5rem;
     }
-    .ml-form-fieldRow input:focus { border-color: var(--teal) !important; }
-    .ml-form-embedSubmit button,
-    .ml-form-formContent button[type="submit"] {
-      width: 100% !important;
-      padding: 14px 24px !important;
-      background: var(--teal) !important;
-      color: var(--white) !important;
-      border: none !important;
-      border-radius: 3px !important;
-      font-family: 'DM Sans', sans-serif !important;
-      font-size: 15px !important;
-      font-weight: 500 !important;
-      letter-spacing: 0.03em !important;
-      cursor: pointer !important;
-      transition: background 0.2s !important;
-    }
-    .ml-form-embedSubmit button:hover { background: var(--dark-teal) !important; }
-    .ml-form-successBody { text-align: center !important; padding: 24px 0 !important; }
-    .ml-form-successContent h4 {
-      font-family: 'DM Serif Display', serif !important;
-      font-size: 21px !important;
-      color: var(--dark-teal) !important;
-      margin-bottom: 6px !important;
-    }
-    .ml-form-successContent p { font-size: 14px !important; color: var(--stone) !important; }
-    .privacy-note { font-size: 12px; color: var(--stone); margin-top: 14px; line-height: 1.55; }
-    /* Context section */
-    .context-section { background: var(--cream); padding: 52px 24px; }
     .context-inner { max-width: 560px; margin: 0 auto; }
     .context-section h3 {
-      font-family: 'DM Serif Display', serif;
-      font-size: 19px;
-      font-weight: 400;
-      color: var(--dark-teal);
-      margin-bottom: 14px;
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 500;
+      font-size: 1.25rem;
+      color: var(--white);
+      margin-bottom: 1rem;
       text-align: center;
     }
     .context-section p {
-      font-size: 15px;
+      font-family: 'Barlow', sans-serif;
+      font-weight: 300;
+      font-size: 0.95rem;
       line-height: 1.75;
-      color: var(--black);
-      margin-bottom: 10px;
+      color: rgba(248,246,242,0.7);
+      margin-bottom: 0.75rem;
       text-align: center;
     }
     .context-section p:last-child { margin-bottom: 0; }
-    /* Inside section */
-    .inside-section { background: var(--white); padding: 52px 24px; }
+
+    /* ─── INSIDE SECTION ─── */
+    .inside-section {
+      background: var(--white);
+      padding: 3.25rem 1.5rem;
+    }
     .inside-inner { max-width: 560px; margin: 0 auto; }
     .inside-section h3 {
-      font-family: 'DM Serif Display', serif;
-      font-size: 19px;
-      font-weight: 400;
-      color: var(--dark-teal);
-      margin-bottom: 24px;
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 500;
+      font-size: 1.25rem;
+      color: var(--charcoal);
+      margin-bottom: 1.75rem;
       text-align: center;
     }
     .system-list {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 12px;
+      gap: 0.75rem;
     }
     @media (max-width: 460px) { .system-list { grid-template-columns: 1fr; } }
     .system-item {
-      background: var(--cream);
-      border-left: 3px solid var(--teal);
-      padding: 13px 15px;
-      border-radius: 0 3px 3px 0;
+      background: var(--white);
+      border-left: 2px solid var(--gold);
+      padding: 0.85rem 1rem;
+      border-radius: 0 2px 2px 0;
+      border-top: 1px solid rgba(191,160,84,0.1);
+      border-right: 1px solid rgba(191,160,84,0.1);
+      border-bottom: 1px solid rgba(191,160,84,0.1);
     }
     .system-name {
-      font-size: 12px;
+      font-family: 'Barlow Condensed', sans-serif;
       font-weight: 500;
-      color: var(--teal);
-      letter-spacing: 0.07em;
+      font-size: 0.7rem;
+      color: var(--gold);
+      letter-spacing: 1.5px;
       text-transform: uppercase;
-      margin-bottom: 5px;
+      margin-bottom: 0.35rem;
     }
-    .system-desc { font-size: 13px; color: var(--stone); line-height: 1.55; }
-    /* Quote section */
-    .quote-section { background: var(--dark-teal); padding: 52px 24px; text-align: center; }
+    .system-desc {
+      font-family: 'Barlow', sans-serif;
+      font-weight: 400;
+      font-size: 0.82rem;
+      color: var(--text-sec);
+      line-height: 1.55;
+    }
+
+    /* ─── QUOTE SECTION ─── */
+    .quote-section {
+      background: var(--charcoal);
+      padding: 3.25rem 1.5rem;
+      text-align: center;
+    }
     .quote-inner { max-width: 520px; margin: 0 auto; }
     blockquote {
-      font-family: 'DM Serif Display', serif;
+      font-family: 'Cormorant Garamond', serif;
       font-style: italic;
-      font-size: clamp(17px, 3vw, 22px);
+      font-weight: 400;
+      font-size: clamp(1.05rem, 3vw, 1.35rem);
       color: var(--white);
       line-height: 1.55;
-      margin-bottom: 14px;
+      margin-bottom: 0.9rem;
     }
     .quote-attr {
-      font-size: 12px;
-      color: var(--light-teal);
-      letter-spacing: 0.09em;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 500;
+      font-size: 0.7rem;
+      color: var(--gold);
+      letter-spacing: 2px;
       text-transform: uppercase;
     }
-    /* Footer */
+
+    /* ─── FOOTER ─── */
     footer {
-      background: var(--teal);
-      padding: 22px 24px;
+      padding: 1.75rem 1.5rem;
       text-align: center;
+      border-top: 1px solid rgba(191,160,84,0.15);
       margin-top: auto;
     }
-    footer p { font-size: 12px; color: var(--cream); line-height: 1.7; }
-    footer .proverb {
-      font-style: italic;
-      color: rgba(220,232,245,0.65);
-      font-size: 11px;
-      margin-top: 4px;
+    footer p {
+      font-family: 'Barlow', sans-serif;
+      font-weight: 300;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      line-height: 1.7;
     }
-    footer a { color: var(--light-teal); text-decoration: none; }
+    footer .proverb {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      color: var(--text-muted);
+      font-size: 0.75rem;
+      margin-top: 0.3rem;
+      opacity: 0.7;
+    }
+    footer a {
+      color: var(--gold);
+      text-decoration: none;
+    }
   </style>
 </head>
 <body>
 
   <header>
-    <p class="brand">Get R.E.A.L. Integrative Health</p>
+    <p class="brand">Get R.E.A.L.<span>.</span> Integrative Health</p>
   </header>
 
   <section class="hero">
@@ -256,52 +266,18 @@
 
   <section class="form-section">
     <div class="form-wrap">
-      <h2>Send me the guide</h2>
+      <h2>Get the Guide</h2>
       <p class="form-note">One page. Organized by body system. Yours to keep.</p>
 
-      <div id="mlb2-182588659190465703" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-182588659190465703">
-        <div class="ml-form-align-center">
-          <div class="ml-form-embedWrapper embedForm">
-            <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
-              <div class="ml-form-embedContent" style="display:none;"></div>
-              <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/2167859/forms/182588659190465703/subscribe" data-code="" method="post" target="_blank">
-                <div class="ml-form-formContent">
-                  <div class="ml-form-fieldRow ml-last-item">
-                    <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
-                      <input aria-label="email" aria-required="true" type="email" class="form-control" data-inputmask="" name="fields[email]" placeholder="Your email address" autocomplete="email" />
-                    </div>
-                  </div>
-                </div>
-                <input type="hidden" name="ml-submit" value="1" />
-                <div class="ml-form-embedSubmit">
-                  <button type="submit" class="primary">Send me the guide</button>
-                  <button disabled="disabled" style="display:none;" type="button" class="loading">
-                    <div class="ml-form-embedSubmitLoad"></div>
-                    <span class="sr-only">Loading...</span>
-                  </button>
-                </div>
-                <input type="hidden" name="anticsrf" value="true" />
-              </form>
-            </div>
-            <div class="ml-form-successBody row-success" style="display:none;">
-              <div class="ml-form-successContent">
-                <h4>Check your inbox.</h4>
-                <p>Your guide is on its way.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <!-- MailerLite embedded form — groot ID 38927861, account 2167859 -->
+      <div class="ml-embedded" data-form="38927861"></div>
       <script>
-        function ml_webform_success_182588659190465703() {
-          var $ = ml_jQuery || jQuery;
-          $('.ml-subscribe-form-182588659190465703 .row-success').show();
-          $('.ml-subscribe-form-182588659190465703 .row-form').hide();
-        }
+        (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments);},l=d.createElement(e),l.async=1,l.src=u,n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+        (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+        ml('account', '2167859');
       </script>
-      <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v300817e6d2b07e9b3dfe9aa59b42f82e" type="text/javascript"></script>
 
-      <p class="privacy-note">No spam. Unsubscribe any time. Your information is never shared.</p>
+      <p class="privacy-note">No spam. Three emails total, then you decide what's next.</p>
     </div>
   </section>
 
@@ -353,9 +329,9 @@
   </section>
 
   <footer>
-    <p>Powered by: Strategic Health Group, LLC. &nbsp;&middot;&nbsp; For educational purposes only &nbsp;&middot;&nbsp; Not medical advice</p>
+    <p>Powered by Strategic Health Group, LLC &nbsp;&middot;&nbsp; For educational purposes only &nbsp;&middot;&nbsp; Not medical advice</p>
     <p>Questions? <a href="mailto:maria@getshgllc.com">maria@getshgllc.com</a></p>
-    <p class="proverb">"Get wisdom! Get understanding!" &nbsp;&#8212;&nbsp; Proverbs 4:5</p>
+    <p class="proverb">"Get wisdom! Get understanding!" &mdash; Proverbs 4:5</p>
   </footer>
 
 </body>
