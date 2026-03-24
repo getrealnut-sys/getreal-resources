@@ -106,6 +106,54 @@
       margin-bottom: 26px;
       line-height: 1.6;
     }
+    /* MailerLite overrides */
+    #mlb2-form, .ml-form-embedWrapper, .ml-form-embedBody {
+      background: transparent !important;
+      padding: 0 !important;
+      border: none !important;
+      box-shadow: none !important;
+      width: 100% !important;
+    }
+    .ml-form-embedBody .ml-form-embedContent { display: none !important; }
+    .ml-form-fieldRow input[type="email"],
+    .ml-form-fieldRow input[type="text"] {
+      width: 100% !important;
+      padding: 13px 16px !important;
+      border: 1.5px solid var(--light-teal) !important;
+      border-radius: 3px !important;
+      font-family: 'DM Sans', sans-serif !important;
+      font-size: 15px !important;
+      color: var(--black) !important;
+      background: var(--white) !important;
+      outline: none !important;
+      transition: border-color 0.2s !important;
+      margin-bottom: 10px !important;
+    }
+    .ml-form-fieldRow input:focus { border-color: var(--teal) !important; }
+    .ml-form-embedSubmit button,
+    .ml-form-formContent button[type="submit"] {
+      width: 100% !important;
+      padding: 14px 24px !important;
+      background: var(--teal) !important;
+      color: var(--white) !important;
+      border: none !important;
+      border-radius: 3px !important;
+      font-family: 'DM Sans', sans-serif !important;
+      font-size: 15px !important;
+      font-weight: 500 !important;
+      letter-spacing: 0.03em !important;
+      cursor: pointer !important;
+      transition: background 0.2s !important;
+    }
+    .ml-form-embedSubmit button:hover { background: var(--dark-teal) !important; }
+    .ml-form-successBody { text-align: center !important; padding: 24px 0 !important; }
+    .ml-form-successContent h4 {
+      font-family: 'DM Serif Display', serif !important;
+      font-size: 21px !important;
+      color: var(--dark-teal) !important;
+      margin-bottom: 6px !important;
+    }
+    .ml-form-successContent p { font-size: 14px !important; color: var(--stone) !important; }
     .privacy-note { font-size: 12px; color: var(--stone); margin-top: 14px; line-height: 1.55; }
     /* Context section */
     .context-section { background: var(--cream); padding: 52px 24px; }
@@ -212,14 +260,49 @@
       <p class="form-note">One page. Organized by body system. Yours to keep.</p>
 
       <!-- MailerLite embedded form — Get R.E.A.L. Body Signal Guide Opt-In -->
-      <!-- Form ID: 182843072733775089 / groot ID: 38927861 / Account: 2167859 -->
+      <!-- Form ID: 182843072733775089 / Account: 2167859 -->
       <!-- Group: Get R.E.A.L. Subscribers (182586184381236766) -->
-      <div class="ml-embedded" data-form="38927861"></div>
+      <div id="mlb2-182843072733775089" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-182843072733775089">
+        <div class="ml-form-align-center">
+          <div class="ml-form-embedWrapper embedForm">
+            <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
+              <div class="ml-form-embedContent" style="display:none;"></div>
+              <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/2167859/forms/182843072733775089/subscribe" data-code="" method="post" target="_blank">
+                <div class="ml-form-formContent">
+                  <div class="ml-form-fieldRow ml-last-item">
+                    <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
+                      <input aria-label="email" aria-required="true" type="email" class="form-control" data-inputmask="" name="fields[email]" placeholder="Your email address" autocomplete="email" />
+                    </div>
+                  </div>
+                </div>
+                <input type="hidden" name="ml-submit" value="1" />
+                <div class="ml-form-embedSubmit">
+                  <button type="submit" class="primary">Get the Guide</button>
+                  <button disabled="disabled" style="display:none;" type="button" class="loading">
+                    <div class="ml-form-embedSubmitLoad"></div>
+                    <span class="sr-only">Loading...</span>
+                  </button>
+                </div>
+                <input type="hidden" name="anticsrf" value="true" />
+              </form>
+            </div>
+            <div class="ml-form-successBody row-success" style="display:none;">
+              <div class="ml-form-successContent">
+                <h4>Check your inbox.</h4>
+                <p>Your guide is on its way.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <script>
-        (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments);},l=d.createElement(e),l.async=1,l.src=u,n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
-        (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
-        ml('account', '2167859');
+        function ml_webform_success_182843072733775089() {
+          var $ = ml_jQuery || jQuery;
+          $('.ml-subscribe-form-182843072733775089 .row-success').show();
+          $('.ml-subscribe-form-182843072733775089 .row-form').hide();
+        }
       </script>
+      <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v300817e6d2b07e9b3dfe9aa59b42f82e" type="text/javascript"></script>
 
       <p class="privacy-note">No spam. Three emails total, then you decide what's next.</p>
     </div>
@@ -274,9 +357,4 @@
 
   <footer>
     <p>Powered by: Strategic Health Group, LLC. &nbsp;&middot;&nbsp; For educational purposes only &nbsp;&middot;&nbsp; Not medical advice</p>
-    <p>Questions? <a href="mailto:maria@getshgllc.com">maria@getshgllc.com</a></p>
-    <p class="proverb">"Get wisdom! Get understanding!" &nbsp;&#8212;&nbsp; Proverbs 4:5</p>
-  </footer>
-
-</body>
-</html>
+    <p>Questions? <a href="/cdn-cgi/l/email-protection#deb3bfacb7bf9eb9bbaaadb6b9b2b2bdf0bdb1b3"><span class="__cf_email__" data-cfemail="91fcf0e3f8f0d1f6f4e5e2f9f6fdfdf2bff2fefc">[email&#160;protected]</s
