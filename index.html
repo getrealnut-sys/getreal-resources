@@ -7,46 +7,43 @@
   <meta name="description" content="Common patterns by body system and what they may be communicating. Free one-page reference guide from Get R.E.A.L. Integrative Health." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --gold:       #BFA054;
-      --gold-light: #d4b96a;
-      --charcoal:   #181818;
-      --white:      #F8F6F2;
-      --text-sec:   #555;
-      --text-muted: #888;
+      --teal:       #225777;
+      --dark-teal:  #12374E;
+      --light-teal: #D5E8F0;
+      --cream:      #DCE8F5;
+      --stone:      #7A7670;
+      --black:      #1A1A1A;
+      --white:      #ffffff;
     }
     body {
-      font-family: 'Barlow', sans-serif;
+      font-family: 'DM Sans', sans-serif;
       background: var(--white);
-      color: var(--charcoal);
+      color: var(--black);
       min-height: 100vh;
       display: flex;
       flex-direction: column;
-      -webkit-font-smoothing: antialiased;
     }
-
-    /* ─── HEADER ─── */
+    /* Header */
     header {
-      padding: 1.25rem 1.5rem;
+      background: var(--teal);
+      padding: 16px 24px;
       text-align: center;
-      border-bottom: 1px solid rgba(191,160,84,0.15);
     }
     header .brand {
-      font-family: 'Cormorant Garamond', serif;
+      font-size: 12px;
       font-weight: 500;
-      font-size: 1.35rem;
-      color: var(--charcoal);
-      letter-spacing: 0.02em;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--cream);
     }
-    header .brand span { color: var(--gold); }
-
-    /* ─── HERO ─── */
+    /* Hero */
     .hero {
-      background: var(--charcoal);
-      padding: 4.5rem 1.5rem 4rem;
+      background: var(--dark-teal);
+      padding: 68px 24px 60px;
       text-align: center;
       position: relative;
       overflow: hidden;
@@ -55,7 +52,7 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: radial-gradient(ellipse at 65% 0%, rgba(191,160,84,0.08) 0%, transparent 65%);
+      background: radial-gradient(ellipse at 65% 0%, rgba(34,87,119,0.55) 0%, transparent 65%);
       pointer-events: none;
     }
     .hero-inner {
@@ -65,195 +62,140 @@
     }
     .hero-eyebrow {
       display: inline-block;
-      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 11px;
       font-weight: 500;
-      font-size: 0.75rem;
-      letter-spacing: 3px;
+      letter-spacing: 0.18em;
       text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 1.25rem;
+      color: var(--light-teal);
+      margin-bottom: 18px;
     }
     .hero h1 {
-      font-family: 'Cormorant Garamond', serif;
-      font-weight: 500;
-      font-size: clamp(1.9rem, 5vw, 3rem);
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(30px, 5vw, 50px);
+      font-weight: 400;
       line-height: 1.18;
       color: var(--white);
-      margin-bottom: 1.25rem;
+      margin-bottom: 20px;
     }
-    .hero h1 em {
-      font-style: italic;
-      color: var(--gold-light);
-    }
+    .hero h1 em { font-style: italic; color: var(--light-teal); }
     .hero-sub {
-      font-family: 'Barlow', sans-serif;
+      font-size: 16px;
       font-weight: 300;
-      font-size: 1rem;
       line-height: 1.7;
-      color: rgba(248,246,242,0.7);
+      color: var(--cream);
       max-width: 500px;
       margin: 0 auto;
     }
-
-    /* ─── FORM SECTION ─── */
+    /* Form section */
     .form-section {
       background: var(--white);
-      padding: 3.25rem 1.5rem 2.75rem;
+      padding: 52px 24px 44px;
       text-align: center;
     }
     .form-wrap { max-width: 460px; margin: 0 auto; }
     .form-section h2 {
-      font-family: 'Cormorant Garamond', serif;
-      font-weight: 500;
-      font-size: 1.35rem;
-      color: var(--charcoal);
-      margin-bottom: 0.4rem;
+      font-family: 'DM Serif Display', serif;
+      font-size: 21px;
+      font-weight: 400;
+      color: var(--dark-teal);
+      margin-bottom: 6px;
     }
     .form-note {
-      font-family: 'Barlow', sans-serif;
-      font-weight: 400;
-      font-size: 0.9rem;
-      color: var(--text-sec);
-      margin-bottom: 1.5rem;
+      font-size: 14px;
+      color: var(--stone);
+      margin-bottom: 26px;
       line-height: 1.6;
     }
-    .privacy-note {
-      font-family: 'Barlow', sans-serif;
-      font-weight: 300;
-      font-size: 0.75rem;
-      color: var(--text-muted);
-      margin-top: 0.9rem;
-      line-height: 1.55;
-    }
-
-    /* ─── CONTEXT SECTION ─── */
-    .context-section {
-      background: var(--charcoal);
-      padding: 3.25rem 1.5rem;
-    }
+    .privacy-note { font-size: 12px; color: var(--stone); margin-top: 14px; line-height: 1.55; }
+    /* Context section */
+    .context-section { background: var(--cream); padding: 52px 24px; }
     .context-inner { max-width: 560px; margin: 0 auto; }
     .context-section h3 {
-      font-family: 'Cormorant Garamond', serif;
-      font-weight: 500;
-      font-size: 1.25rem;
-      color: var(--white);
-      margin-bottom: 1rem;
+      font-family: 'DM Serif Display', serif;
+      font-size: 19px;
+      font-weight: 400;
+      color: var(--dark-teal);
+      margin-bottom: 14px;
       text-align: center;
     }
     .context-section p {
-      font-family: 'Barlow', sans-serif;
-      font-weight: 300;
-      font-size: 0.95rem;
+      font-size: 15px;
       line-height: 1.75;
-      color: rgba(248,246,242,0.7);
-      margin-bottom: 0.75rem;
+      color: var(--black);
+      margin-bottom: 10px;
       text-align: center;
     }
     .context-section p:last-child { margin-bottom: 0; }
-
-    /* ─── INSIDE SECTION ─── */
-    .inside-section {
-      background: var(--white);
-      padding: 3.25rem 1.5rem;
-    }
+    /* Inside section */
+    .inside-section { background: var(--white); padding: 52px 24px; }
     .inside-inner { max-width: 560px; margin: 0 auto; }
     .inside-section h3 {
-      font-family: 'Cormorant Garamond', serif;
-      font-weight: 500;
-      font-size: 1.25rem;
-      color: var(--charcoal);
-      margin-bottom: 1.75rem;
+      font-family: 'DM Serif Display', serif;
+      font-size: 19px;
+      font-weight: 400;
+      color: var(--dark-teal);
+      margin-bottom: 24px;
       text-align: center;
     }
     .system-list {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 0.75rem;
+      gap: 12px;
     }
     @media (max-width: 460px) { .system-list { grid-template-columns: 1fr; } }
     .system-item {
-      background: var(--white);
-      border-left: 2px solid var(--gold);
-      padding: 0.85rem 1rem;
-      border-radius: 0 2px 2px 0;
-      border-top: 1px solid rgba(191,160,84,0.1);
-      border-right: 1px solid rgba(191,160,84,0.1);
-      border-bottom: 1px solid rgba(191,160,84,0.1);
+      background: var(--cream);
+      border-left: 3px solid var(--teal);
+      padding: 13px 15px;
+      border-radius: 0 3px 3px 0;
     }
     .system-name {
-      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 12px;
       font-weight: 500;
-      font-size: 0.7rem;
-      color: var(--gold);
-      letter-spacing: 1.5px;
+      color: var(--teal);
+      letter-spacing: 0.07em;
       text-transform: uppercase;
-      margin-bottom: 0.35rem;
+      margin-bottom: 5px;
     }
-    .system-desc {
-      font-family: 'Barlow', sans-serif;
-      font-weight: 400;
-      font-size: 0.82rem;
-      color: var(--text-sec);
-      line-height: 1.55;
-    }
-
-    /* ─── QUOTE SECTION ─── */
-    .quote-section {
-      background: var(--charcoal);
-      padding: 3.25rem 1.5rem;
-      text-align: center;
-    }
+    .system-desc { font-size: 13px; color: var(--stone); line-height: 1.55; }
+    /* Quote section */
+    .quote-section { background: var(--dark-teal); padding: 52px 24px; text-align: center; }
     .quote-inner { max-width: 520px; margin: 0 auto; }
     blockquote {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'DM Serif Display', serif;
       font-style: italic;
-      font-weight: 400;
-      font-size: clamp(1.05rem, 3vw, 1.35rem);
+      font-size: clamp(17px, 3vw, 22px);
       color: var(--white);
       line-height: 1.55;
-      margin-bottom: 0.9rem;
+      margin-bottom: 14px;
     }
     .quote-attr {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 500;
-      font-size: 0.7rem;
-      color: var(--gold);
-      letter-spacing: 2px;
+      font-size: 12px;
+      color: var(--light-teal);
+      letter-spacing: 0.09em;
       text-transform: uppercase;
     }
-
-    /* ─── FOOTER ─── */
+    /* Footer */
     footer {
-      padding: 1.75rem 1.5rem;
+      background: var(--teal);
+      padding: 22px 24px;
       text-align: center;
-      border-top: 1px solid rgba(191,160,84,0.15);
       margin-top: auto;
     }
-    footer p {
-      font-family: 'Barlow', sans-serif;
-      font-weight: 300;
-      font-size: 0.75rem;
-      color: var(--text-muted);
-      line-height: 1.7;
-    }
+    footer p { font-size: 12px; color: var(--cream); line-height: 1.7; }
     footer .proverb {
-      font-family: 'Cormorant Garamond', serif;
       font-style: italic;
-      color: var(--text-muted);
-      font-size: 0.75rem;
-      margin-top: 0.3rem;
-      opacity: 0.7;
+      color: rgba(220,232,245,0.65);
+      font-size: 11px;
+      margin-top: 4px;
     }
-    footer a {
-      color: var(--gold);
-      text-decoration: none;
-    }
+    footer a { color: var(--light-teal); text-decoration: none; }
   </style>
 </head>
 <body>
 
   <header>
-    <p class="brand">Get R.E.A.L.<span>.</span> Integrative Health</p>
+    <p class="brand">Get R.E.A.L. Integrative Health</p>
   </header>
 
   <section class="hero">
@@ -269,7 +211,9 @@
       <h2>Get the Guide</h2>
       <p class="form-note">One page. Organized by body system. Yours to keep.</p>
 
-      <!-- MailerLite embedded form — groot ID 38927861, account 2167859 -->
+      <!-- MailerLite embedded form — Get R.E.A.L. Body Signal Guide Opt-In -->
+      <!-- Form ID: 182843072733775089 / groot ID: 38927861 / Account: 2167859 -->
+      <!-- Group: Get R.E.A.L. Subscribers (182586184381236766) -->
       <div class="ml-embedded" data-form="38927861"></div>
       <script>
         (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments);},l=d.createElement(e),l.async=1,l.src=u,n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
@@ -329,9 +273,9 @@
   </section>
 
   <footer>
-    <p>Powered by Strategic Health Group, LLC &nbsp;&middot;&nbsp; For educational purposes only &nbsp;&middot;&nbsp; Not medical advice</p>
+    <p>Powered by: Strategic Health Group, LLC. &nbsp;&middot;&nbsp; For educational purposes only &nbsp;&middot;&nbsp; Not medical advice</p>
     <p>Questions? <a href="mailto:maria@getshgllc.com">maria@getshgllc.com</a></p>
-    <p class="proverb">"Get wisdom! Get understanding!" &mdash; Proverbs 4:5</p>
+    <p class="proverb">"Get wisdom! Get understanding!" &nbsp;&#8212;&nbsp; Proverbs 4:5</p>
   </footer>
 
 </body>
